@@ -6,13 +6,15 @@ class AddTodoForm extends Component {
     this.state = {
       newTask: ''
     };
+
+    this.handleFormChange = this.handleFormChange.bind(this);
   }
 
-  handleFormChange = event => {
+  handleFormChange(event) {
     this.setState({
       newTask: event.target.value
     });
-  };
+  }
 
   render() {
     return (

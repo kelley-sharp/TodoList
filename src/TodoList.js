@@ -16,12 +16,12 @@ class TodoList extends Component {
       ]
     };
 
-  //   addTodo = newTask => {
-  //     this.setState({
-  //       todos: this.state.todos.push(newTask)
-  //     });
-  //   };
-  // }
+    //   addTodo = newTask => {
+    //     this.setState({
+    //       todos: this.state.todos.push(newTask)
+    //     });
+    //   };
+  }
 
   render() {
     return (
