@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import uuid from 'uuid/v1';
 
 class AddTodoForm extends Component {
   constructor(props) {
@@ -8,6 +9,7 @@ class AddTodoForm extends Component {
     };
 
     this.handleFormChange = this.handleFormChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   handleFormChange(event) {
@@ -16,9 +18,22 @@ class AddTodoForm extends Component {
     });
   }
 
+  handleSubmit(event) {
+    event.preventDefault();
+    let newTodo = {
+      task: this.state.newTask,
+      isDone: false,
+      id: uuid()
+    };
+    this.props.addTodo(newTodo);
+    this.setState({
+      newTask: ''
+    });
+  }
+
   render() {
     return (
-      <form>
+      <form onSubmit={this.handleSubmit}>
         <label htmlFor="task" />
         <input
           type="text"

@@ -15,18 +15,21 @@ class TodoList extends Component {
         }
       ]
     };
+    this.addTodo = this.addTodo.bind(this);
+  }
 
-    //   addTodo = newTask => {
-    //     this.setState({
-    //       todos: this.state.todos.push(newTask)
-    //     });
-    //   };
+  addTodo(newTodo) {
+    let newTodos = this.state.todos.slice();
+    newTodos.push(newTodo);
+    this.setState({
+      todos: newTodos
+    });
   }
 
   render() {
     return (
       <div>
-        <AddTodoForm />
+        <AddTodoForm addTodo={this.addTodo} />
         <ul className="list">
           {this.state.todos.map(todo => {
             return <Todo task={todo.task} isDone={todo.isDone} />;
