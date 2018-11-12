@@ -8,7 +8,11 @@ class Todo extends Component {
   render() {
     return (
       <li>
-        <input type="checkbox" checked={this.props.isDone} />
+        <input
+          type="checkbox"
+          checked={this.props.isDone}
+          onChange={this.props.toggleTodo}
+        />
         {this.props.task}
       </li>
     );

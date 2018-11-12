@@ -1,18 +1,49 @@
-.App {
-  transform: translate(-50%, -150%);
-  position: absolute;
-  top: 50%;
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  min-height: 80vh;
+  max-width: 50%;
+  width: 100%;
+  position: relative;
+  margin: 0 auto;
+  /* top: 50%;
   left: 50%;
+  transform: translate(-50%, -50%); */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .list {
   padding-left: 0;
+  /* padding: 0;
+  margin: 0; */
   list-style: none;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  /* align-items: flex-start; */
+  /* justify-content: flex-end; */
+  /* width: 100%; */
 }
 
 .list input {
   margin-right: 10px;
 }
+
+.todo-app {
+  background-color: #d8d4d4;
+  border-radius: 4px 4px 0 0;
+  width: 100%;
+  box-shadow: 0 0 2px 1px rgb(184, 182, 182);
+  max-width: calc(100%-50px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* .todo-list__item--completed {
+
+} */
