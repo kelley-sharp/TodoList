@@ -1,12 +1,14 @@
 body {
   margin: 0;
   padding: 0;
+  border: 2px solid black;
+  height: 100vh;
 }
 
 .container {
   min-height: 80vh;
-  max-width: 50%;
   width: 100%;
+  max-width: 50%;
   position: relative;
   margin: 0 auto;
   /* top: 50%;
@@ -15,6 +17,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  border: 2px solid red;
 }
 
 .list {
@@ -34,7 +37,7 @@ body {
 }
 
 .todo-app {
-  background-color: #d8d4d4;
+  background-color: #5c5858;
   border-radius: 4px 4px 0 0;
   width: 100%;
   box-shadow: 0 0 2px 1px rgb(184, 182, 182);
@@ -44,6 +47,19 @@ body {
   align-items: center;
 }
 
-/* .todo-list__item--completed {
+[class^='todo-list__item'] {
+  cursor: pointer;
+  border: 2px solid black;
+}
 
-} */
+.todo-list__item--completed {
+  text-decoration: line-through;
+}
+
+.todo-list__item--active {
+  color: rgb(27, 236, 27);
+}
+
+input {
+  cursor: pointer;
+}

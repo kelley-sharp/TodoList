@@ -7,11 +7,17 @@ class Todo extends Component {
 
   render() {
     return (
-      <li>
+      <li
+        onClick={this.props.toggleTodo}
+        className={
+          this.props.isDone
+            ? 'todo-list__item--completed'
+            : 'todo-list__item--active'
+        }
+      >
         <input
           type="checkbox"
           checked={this.props.isDone}
-          onChange={this.props.toggleTodo}
         />
         {this.props.task}
       </li>
