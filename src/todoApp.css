@@ -1,0 +1,175 @@
+:root {
+  font-size: 16px;
+  /* font-size is set on the root so we can use rem later and it will refer to this measurement */
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+body {
+  background: #bdc3c7;
+  margin: 0;
+  border: 2px solid black;
+}
+
+.container {
+  min-height: 100vh;
+  width: 100%;
+  /* width 100 to make sure it uses as much as possible */
+  max-width: 730px;
+  position: relative;
+  margin: 0 auto;
+  /* pos and margin here are so it can be centered  */
+  /* alternatively - top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); */
+  display: flex;
+  /* flex to make go to bottom */
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.todo-app {
+  background: #ecf0f1;
+  border-radius: 4px 4px 0 0;
+  width: 100%;
+  box-shadow: 0 0 2px 1px rgb(0,0,0,0.1);
+  max-width: calc(100%-50px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.list-container {
+  width: 100%;
+  display: flex;
+}
+
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  order: -1;
+  display: flex;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.list input {
+  margin-right: 10px;
+}
+
+.item-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+[class^='todo-list__item'] {
+  padding: 35px 33px 0 78px;
+  cursor: pointer;
+  width: 100%;
+  height: 80px;
+  display: block;
+  color: #16a085;
+  letter-spacing: 2px;
+  box-sizing: border-box;
+  box-shadow: 0 1px 0 0 #e6e6e6, 0 2px 0 0 white;
+  background-image: url('./images/Checkbox\ Empty\ png\ icon.png');
+  background-repeat: no-repeat;
+  background-position: 28px 16px;
+  text-transform: uppercase;
+  order: -1;
+}
+
+.todo-list__item--completed {
+  text-decoration: line-through;
+  color: #8ec3ec;
+  background-image: url('./images/tick\,\ full\,\ checkbox\ png\ icon.png');
+  background-repeat: no-repeat;
+  background-position: 28px 16px;
+}
+
+[class^='todo-list__item'] input {
+  display: none;
+}
+
+.add-todo__container {
+  width: 100%;
+}
+
+.add-todo {
+  width: 100%;
+  position: relative;
+  /* rel so we can position things inside of it relative to it(the parent) */
+  height: 80px;
+  /* same size as li themselves */
+  margin: 2px 0 1px;
+  box-shadow: 0 1px 0 0 #e6e6e6, 0 2px 0 0 white;
+
+}
+
+.add-todo__button {
+  position: absolute;
+  display: block;
+  width: 60px;
+  height: 100%;
+  background: transparent;
+  color: #b3b3b3;
+  border: 0;
+  left: 0;
+  top: 0;
+  cursor: pointer;
+  font-size: 30px;  
+}
+
+.add-todo__button:focus {
+  outline: none;
+}
+
+.add-todo__input {
+  cursor: text;
+  border: 0;
+  font-size: 1rem;
+  height: 100%;
+  background: transparent;
+  box-sizing: border-box;
+  padding-left: 80px;
+  width: 100%;
+  color: #666666;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 600;
+}
+
+.add-todo__input:focus {
+  outline: none;
+  background: rgba(0,0,0,0.05);
+}
+
+.add-todo__input::placeholder {
+  color: #b3b3b3;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.todo-footer {
+  display: flex;
+  padding: 50px;
+  background: rgb(37, 48, 100);
+  color: #ecf0f1;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  width: 100%;
+  border-radius: 2px 2px 0 0;
+  justify-content: center;
+}
+
+

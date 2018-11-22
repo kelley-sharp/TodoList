@@ -1,10 +1,6 @@
 import React, { Component } from 'react';
 
 class Todo extends Component {
-  constructor(props) {
-    super(props);
-  }
-
   render() {
     return (
       <li
@@ -15,10 +11,7 @@ class Todo extends Component {
             : 'todo-list__item--active'
         }
       >
-        <input
-          type="checkbox"
-          checked={this.props.isDone}
-        />
+        <input type="checkbox" checked={this.props.isDone} />
         {this.props.task}
       </li>
     );
